@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Remco Roos | Performance Marketeer | Value First, Always</title>
+    <meta name="description"
+        content="Partner bij InfoTrade. Specialist in automotive marketing, SEA & conversie-optimalisatie. 20+ jaar ervaring met focus op rendement.">
+    <link rel="canonical" href="https://www.remcoroos.nl/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.remcoroos.nl/" />
+    <meta property="og:title" content="Remco Roos | Performance Marketeer | Value First, Always" />
+    <meta property="og:description"
+        content="Partner bij InfoTrade. Specialist in automotive marketing, SEA & conversie-optimalisatie. 20+ jaar ervaring met focus op rendement." />
+    <meta property="og:image" content="https://www.remcoroos.nl/Profiel.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.remcoroos.nl/" />
+    <meta property="twitter:title" content="Remco Roos | Performance Marketeer | Value First, Always" />
+    <meta property="twitter:description"
+        content="Partner bij InfoTrade. Specialist in automotive marketing, SEA & conversie-optimalisatie. 20+ jaar ervaring met focus op rendement." />
+    <meta property="twitter:image" content="https://www.remcoroos.nl/Profiel.png" />
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Remco Roos",
+      "url": "https://www.remcoroos.nl",
+      "image": "https://www.remcoroos.nl/Profiel.png",
+      "jobTitle": "Performance Marketeer & Partner",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "InfoTrade"
+      },
+      "description": "Partner bij InfoTrade. Specialist in automotive marketing, SEA & conversie-optimalisatie.",
+      "sameAs": [
+        "https://www.linkedin.com/in/remcoroos"
+      ]
+    }
+    </script>
+
+    <!-- Fonts: Only Inter (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- React & ReactDOM (CDN) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+    <!-- Babel (CDN) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        black: '#050505',
+                        dark: '#0a0a0a',
+                        white: '#ffffff',
+                        gray: {
+                            100: '#f3f4f6',
+                            500: '#6b7280',
+                            800: '#1f2937',
+                            900: '#111827',
+                        },
+                        accent: '#ffffff', // White
+                    },
+                    letterSpacing: {
+                        tighter: '-0.04em',
+                        tight: '-0.02em',
+                        widest: '0.25em',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'reveal': 'reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards',
+                        'cinematic-zoom': 'cinematicZoom 20s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(40px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        reveal: {
+                            '0%': { transform: 'translateY(100%)' },
+                            '100%': { transform: 'translateY(0)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        cinematicZoom: {
+                            '0%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.05)' },
+                            '100%': { transform: 'scale(1)' },
+                        }
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: white;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Scroll Reveal Class */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Sleek Button Hover */
+        .btn-sleek {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-sleek::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background-color: #ffffff;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: -1;
+        }
+
+        .btn-sleek:hover::after {
+            height: 100%;
+        }
+
+        .btn-sleek:hover {
+            color: #000000;
+        }
+
+        /* Selection Color */
+        ::selection {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Noise Overlay */
+        .noise-overlay {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Utility for keeping footer at bottom if content is short */
+        #root {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- NEW PREMIUM EFFECTS --- */
+
+        /* 3D Tilt Card */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+
+        .tilt-content {
+            transform: translateZ(20px);
+        }
+
+        /* Button Glow */
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-glow:hover::before {
+            left: 100%;
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Nav Link Hover */
+        .nav-link-hover {
+            position: relative;
+        }
+
+        .nav-link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link-hover:hover::after {
+            width: 100%;
+        }
+
+        /* --- NEW DESIGN STYLES --- */
+        .text-gradient-metallic {
+            background: linear-gradient(to bottom, #ffffff 30%, #a0a0a0 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gold {
+            color: #e2c08d;
+        }
+
+        .grayscale-img {
+            filter: grayscale(100%) !important;
+            transition: filter 0.5s ease, transform 0.7s ease;
+        }
+
+        .grayscale-img:hover,
+        .group:hover .grayscale-img {
+            filter: grayscale(0%) !important;
+            transform: scale(1.05);
+        }
+
+        /* Hero Image Specific */
+        .hero-image {
+            filter: grayscale(100%) !important;
+            transition: filter 0.5s ease, transform 0.7s ease;
+            will-change: filter, transform;
+        }
+
+        .hero-image:hover {
+            filter: grayscale(0%) !important;
+            transform: scale(1.02);
+        }
+
+        /* --- MODERN ANIMATIONS --- */
+        .reveal-text-container {
+            overflow: hidden;
+            display: block;
+        }
+
+        .reveal-text {
+            transform: translateY(100%);
+            transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+            display: block;
+        }
+
+        .is-visible .reveal-text,
+        .is-visible.reveal-text {
+            transform: translateY(0);
+        }
+
+        /* Stagger Delays */
+        .stagger-1 {
+            transition-delay: 100ms;
+        }
+
+        .stagger-2 {
+            transition-delay: 200ms;
+        }
+
+        .stagger-3 {
+            transition-delay: 300ms;
+        }
+
+        .stagger-4 {
+            transition-delay: 400ms;
+        }
+
+        .stagger-5 {
+            transition-delay: 500ms;
+        }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // --- TRANSLATIONS ---
+        const translations = {
+            nl: {
+                nav: { professional: "Professional", werkwijze: "Werkwijze", personal: "Personal", contact: "Connect" },
+                hero: {
+                    subline: "Performance marketeer met een waardegerichte aanpak.",
+                    tagline: "Value first, always.",
+                    btnExpertise: "Mijn Expertise",
+                    btnContact: "Contact",
+                    motto: "Value first, always."
+                },
+                professional: {
+                    subtitle: "01 / Professional",
+                    heading: "Expertise",
+                    intro: "Ik ben partner bij InfoTrade, het online marketingbureau dat campagnes bouwt die converteren. Met meer dan twintig jaar ervaring combineer ik brede marketingkennis met diepgaande automotive-expertise.",
+                    problemSolver: "Marketing draait voor mij niet om tools of kanalen, maar om het oplossen van het echte probleem.",
+                    helpTitle: "Waar ik je écht bij help",
+                    list: [
+                        "SEA & SEO – slim ingezet, met focus op rendement",
+                        "Conversie-optimalisatie – van website naar lead naar klant",
+                        "Automotive marketing – autobedrijven & leasemaatschappijen",
+                        "Datagedreven strategie – prioriteiten stellen die impact maken",
+                        "Leadopvolging – want campagnes werken pas echt als opvolging dat ook doet"
+                    ],
+                    style: "Ik werk pragmatisch, creatief, out of the box en hands-on. Geen dikke presentaties, maar duidelijkheid, meedenken en doen."
+                },
+                role: {
+                    subtitle: "02 / Mijn Rol & Werkwijze",
+                    strengthsTitle: "Wat ik sterk doe",
+                    strengths: [
+                        "Brede marketingkennis koppelen aan sectorspecifieke expertise",
+                        "Snel de belangrijkste knoppen vinden om aan te draaien",
+                        "Complexe situaties simpel en werkbaar maken",
+                        "Campagnes laten presteren en resultaten inzichtelijk maken",
+                        "Klanten meenemen in keuzes, zonder ruis of vakjargon"
+                    ],
+                    weaknessesTitle: "En eerlijk: wat minder sterk",
+                    weaknessesIntro: "Ik werk graag snel en direct. Daardoor:",
+                    weaknesses: [
+                        "Staat er soms nét iets te veel tegelijk open",
+                        "Lijk ik soms chaotisch — al weet ik altijd waar de prioriteit ligt",
+                        "Kan ik ongeduldig worden van bureaucratie, dubbele agenda’s en vergaderen om het vergaderen"
+                    ],
+                    closing: "Ik hou van duidelijkheid, verantwoordelijkheid en doorpakken."
+                },
+                personal: {
+                    subtitle: "03 / Personal",
+                    heading: "Vrije Tijd",
+                    intro: "Wedstrijdzeilen, hardlopen, tennis & padel.",
+                    sailingTitle: "Wedstrijdzeilen",
+                    sailingDesc: "Net als in online marketing: trim, techniek, wind inschatten, tactiek en vooruitdenken.",
+                    runningTitle: "Hardlopen",
+                    runningDesc: "Heerlijk om buiten te zijn en in beweging te blijven. Goed voor de conditie en om even te resetten.",
+                    homeTitle: "Thuisbasis",
+                    homeDesc: "Purmerland, net boven Amsterdam. Getrouwd en trotse vader van twee dochters (2005 en 2010).",
+                    whoAmI: "Loyaal, energiek en nieuwsgierig. Wars van bureaucratie. Motto: “Value first, always.”"
+                },
+                contact: {
+                    subtitle: "04 / Connect",
+                    heading: "Let's Talk",
+                    phone: "Telefoon",
+                    email: "E-mail",
+                    location: "InfoTrade • Amsterdam • Purmerland"
+                }
+            },
+            en: {
+                nav: { professional: "Professional", werkwijze: "How I Work", personal: "Personal", contact: "Connect" },
+                hero: {
+                    subline: "Performance marketer with a value-driven approach.",
+                    tagline: "Value first, always.",
+                    btnExpertise: "My Expertise",
+                    btnContact: "Contact",
+                    motto: "Value first, always."
+                },
+                professional: {
+                    subtitle: "01 / Professional",
+                    heading: "Expertise",
+                    intro: "I’m a partner at InfoTrade, an online marketing agency that builds campaigns designed to convert. With more than twenty years of experience, I combine broad marketing expertise with deep automotive knowledge.",
+                    problemSolver: "For me, marketing isn’t about channels or tools — it’s about solving the real problem.",
+                    helpTitle: "What I help you with",
+                    list: [
+                        "SEA & SEO – deployed smartly, with a focus on ROI",
+                        "Conversion optimization – from website to lead to customer",
+                        "Automotive marketing – dealerships & leasing companies",
+                        "Data-driven strategy – identifying the levers that truly matter",
+                        "Lead follow-up – because campaigns only work when follow-up does too"
+                    ],
+                    style: "My approach is pragmatic, creative, out-of-the-box and hands-on. No endless decks — just clarity, collaboration and action."
+                },
+                role: {
+                    subtitle: "02 / How I Work",
+                    strengthsTitle: "What I’m good at",
+                    strengths: [
+                        "Combining broad marketing knowledge with sector-specific expertise",
+                        "Quickly identifying the levers that drive impact",
+                        "Turning complexity into practical, actionable steps",
+                        "Building campaigns that deliver and making results transparent",
+                        "Guiding clients through decisions without noise or jargon"
+                    ],
+                    weaknessesTitle: "And honestly: what I’m less good at",
+                    weaknessesIntro: "I like to move fast. Which means:",
+                    weaknesses: [
+                        "I often have too many tabs open",
+                        "I can appear chaotic — even though I know exactly where the priority is",
+                        "I get impatient with bureaucracy, hidden agendas and meetings without purpose"
+                    ],
+                    closing: "I value clarity, ownership and momentum."
+                },
+                personal: {
+                    subtitle: "03 / Personal",
+                    heading: "Free Time",
+                    intro: "Regatta sailing, running, tennis, padel.",
+                    sailingTitle: "Regatta Sailing",
+                    sailingDesc: "Like marketing: precise trim, reading the wind, tactics and thinking one step ahead.",
+                    runningTitle: "Running",
+                    runningDesc: "Great to be outdoors and keep moving. Good for fitness and a quick reset.",
+                    homeTitle: "Homebase",
+                    homeDesc: "Purmerland, just outside Amsterdam. Married and proud father of two daughters (2005 and 2010).",
+                    whoAmI: "Loyal, energetic and curious. Allergic to bureaucracy. Motto: “Value first, always.”"
+                },
+                contact: {
+                    subtitle: "04 / Connect",
+                    heading: "Let's Talk",
+                    phone: "Phone",
+                    email: "Email",
+                    location: "InfoTrade • Amsterdam • Purmerland"
+                }
+            }
+        };
+
+        // --- CONTEXT ---
+        const LanguageContext = React.createContext();
+        const useLanguage = () => React.useContext(LanguageContext);
+
+        // --- ICONS ---
+        const Icons = {
+            Menu: ({ size = 24, className = "" }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg>,
+            X: ({ size = 24, className = "" }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>,
+            ArrowDown: ({ size = 24, className = "" }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg>,
+            ArrowUpRight: ({ size = 24, className = "" }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg>,
+            ExternalLink: ({ size = 24, className = "" }) => <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
+        };
+
+        // --- MAGNETIC BUTTON COMPONENT ---
+        const Magnetic = ({ children }) => {
+            const ref = React.useRef(null);
+
+            React.useEffect(() => {
+                const element = ref.current;
+                if (!element) return;
+
+                const handleMouseMove = (e) => {
+                    const { clientX, clientY } = e;
+                    const { height, width, left, top } = element.getBoundingClientRect();
+                    const x = clientX - (left + width / 2);
+                    const y = clientY - (top + height / 2);
+
+                    // Move element towards mouse
+                    element.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+                };
+
+                const handleMouseLeave = () => {
+                    element.style.transform = `translate(0px, 0px)`;
+                };
+
+                element.addEventListener("mousemove", handleMouseMove);
+                element.addEventListener("mouseleave", handleMouseLeave);
+
+                // Add smooth transition for return animation
+                element.style.transition = 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
+
+                return () => {
+                    element.removeEventListener("mousemove", handleMouseMove);
+                    element.removeEventListener("mouseleave", handleMouseLeave);
+                };
+            }, []);
+
+            return React.cloneElement(children, { ref });
+        };
+
+        // --- HEADER ---
+        const Header = () => {
+            const [isScrolled, setIsScrolled] = React.useState(false);
+            const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+            const { language, setLanguage, t } = useLanguage();
+
+            React.useEffect(() => {
+                const handleScroll = () => setIsScrolled(window.scrollY > 50);
+                window.addEventListener('scroll', handleScroll);
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+
+            const navLinks = [
+                { name: t.nav.professional, href: '#professional' },
+                { name: t.nav.werkwijze, href: '#werkwijze' },
+                { name: t.nav.personal, href: '#personal' },
+                { name: t.nav.contact, href: '#contact' },
+            ];
+
+            const toggleLang = (lang) => {
+                setLanguage(lang);
+                setIsMenuOpen(false);
+            };
+
+            return (
+                <React.Fragment>
+                    <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${isScrolled ? (isMenuOpen ? 'bg-transparent' : 'bg-black/80 backdrop-blur-md border-b border-white/10') : 'bg-transparent py-6'}`}>
+                        <div className="container mx-auto px-6 md:px-12 h-20 flex justify-between items-center">
+                            <a href="#" className="text-lg tracking-tighter text-white z-50 group">
+                                <span className="font-light text-gray-400 group-hover:text-white transition-colors">REMCO</span>
+                                <span className="font-black">ROOS</span>
+                                <span className="text-accent font-bold">.</span>
+                            </a>
+
+                            <div className="flex items-center gap-12">
+                                <nav className="hidden md:flex space-x-12">
+                                    {navLinks.map((link) => (
+                                        <a key={link.name} href={link.href} className="nav-link-hover text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-all">
+                                            {link.name}
+                                        </a>
+                                    ))}
+                                </nav>
+
+                                {/* Language Switcher Desktop */}
+                                <div className="hidden md:flex items-center text-[10px] font-bold uppercase tracking-widest gap-2">
+                                    <button
+                                        onClick={() => setLanguage('nl')}
+                                        className={`transition-colors ${language === 'nl' ? 'text-white' : 'text-gray-600 hover:text-gray-400'}`}
+                                    >
+                                        NL
+                                    </button>
+                                    <span className="text-gray-700">/</span>
+                                    <button
+                                        onClick={() => setLanguage('en')}
+                                        className={`transition-colors ${language === 'en' ? 'text-white' : 'text-gray-600 hover:text-gray-400'}`}
+                                    >
+                                        EN
+                                    </button>
+                                </div>
+
+                                <button className="md:hidden text-white z-50" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                                    {isMenuOpen ? <Icons.X /> : <Icons.Menu />}
+                                </button>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Mobile Menu Overlay */}
+                    <div className={`fixed inset-0 bg-black/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center transition-all duration-700 cubic-bezier(0.7, 0, 0.3, 1) ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                        <nav className="flex flex-col space-y-8 text-center">
+                            {navLinks.map((link, idx) => (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className={`text-4xl md:text-5xl font-black uppercase tracking-tighter text-white hover:text-gray-500 transition-all transform ${isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                                    style={{ transitionDelay: `${idx * 100}ms` }}
+                                >
+                                    {link.name}
+                                </a>
+                            ))}
+                        </nav>
+
+                        {/* Language Switcher Mobile */}
+                        <div className="mt-12 flex items-center gap-6">
+                            <button
+                                onClick={() => toggleLang('nl')}
+                                className={`text-lg font-bold uppercase tracking-widest ${language === 'nl' ? 'text-white border-b border-white' : 'text-gray-500'}`}
+                            >
+                                NL
+                            </button>
+                            <button
+                                onClick={() => toggleLang('en')}
+                                className={`text-lg font-bold uppercase tracking-widest ${language === 'en' ? 'text-white border-b border-white' : 'text-gray-500'}`}
+                            >
+                                EN
+                            </button>
+                        </div>
+                    </div>
+                </React.Fragment>
+            );
+        };
+
+        // --- HERO ---
+        const Hero = () => {
+            const { t } = useLanguage();
+            return (
+                <section className="relative h-screen w-full overflow-hidden flex items-end justify-start bg-black">
+                    {/* Cinematic Background */}
+                    <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+                        <img
+                            src="Profiel.png"
+                            alt="Remco Roos"
+                            className="w-full h-full object-cover md:object-contain object-center md:object-bottom animate-cinematic-zoom hero-image"
+                            onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1600'; }}
+                        />
+                        <div className="absolute inset-0 bg-black/20 z-10 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-10 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-10 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/80 via-transparent to-transparent z-10 pointer-events-none"></div>
+                    </div>
+
+                    <div className="container mx-auto px-6 md:px-12 relative z-20 pb-24 md:pb-32">
+                        <div className="mb-8 overflow-hidden">
+                            <h1 className="text-4xl md:text-[4.5rem] lg:text-[6rem] font-black text-white tracking-tighter leading-[0.9] uppercase animate-slide-up drop-shadow-2xl text-left text-gradient-metallic">
+                                Remco <br /> Roos
+                            </h1>
+                            <p className="text-gold text-lg md:text-2xl font-bold tracking-wider uppercase mt-4 animate-slide-up delay-100">
+                                {t.hero.tagline}
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 text-sm md:text-lg font-bold tracking-widest text-gray-300 mb-12 animate-slide-up drop-shadow-md" style={{ animationDelay: '0.2s' }}>
+                            <span className="text-white">{t.hero.subline}</span>
+                        </div>
+
+
+
+                        <div className="flex flex-col md:flex-row gap-4 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+                            <Magnetic>
+                                <a href="#professional" className="btn-sleek btn-glow px-8 py-4 border border-white bg-white/10 backdrop-blur-sm text-white font-bold uppercase text-xs tracking-[0.2em] hover:bg-white hover:text-black transition-all inline-block">
+                                    {t.hero.btnExpertise}
+                                </a>
+                            </Magnetic>
+                            <Magnetic>
+                                <a href="#contact" className="btn-sleek btn-glow px-8 py-4 border border-white/20 bg-black/20 backdrop-blur-sm text-white font-bold uppercase text-xs tracking-[0.2em] hover:bg-white/10 inline-block">
+                                    {t.hero.btnContact}
+                                </a>
+                            </Magnetic>
+                        </div>
+                    </div>
+
+                    <div className="absolute bottom-10 right-10 animate-bounce text-white/50 z-20 hidden md:block">
+                        <Icons.ArrowDown size={20} />
+                    </div>
+                </section>
+            );
+        };
+
+        // --- PROFESSIONAL (was Projects) ---
+        const Professional = () => {
+            const { t } = useLanguage();
+
+            const ListItem = ({ text }) => (
+                <div className="flex items-center gap-4 py-3 border-b border-white/10 last:border-none">
+                    <div className="w-1 h-1 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+                    <span className="text-lg font-light tracking-wide text-gray-200">
+                        {text}
+                    </span>
+                </div>
+            );
+
+            return (
+                <section id="professional" className="py-32 bg-[#050505] text-white border-t border-white/5">
+                    <div className="container mx-auto px-6 md:px-12">
+                        <div className="mb-24 border-b border-white/10 pb-8">
+                            <span className="block text-accent font-bold tracking-widest text-xs uppercase mb-4 reveal-on-scroll">{t.professional.subtitle}</span>
+                            <div className="reveal-text-container">
+                                <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-none reveal-text">
+                                    {t.professional.heading}
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-32">
+                            <div className="lg:col-span-5 relative group tilt-card">
+                                <div className="overflow-hidden bg-[#111] relative tilt-content">
+                                    <img
+                                        src="Werk.png"
+                                        alt="Remco Roos InfoTrade"
+                                        loading="lazy"
+                                        className="w-full h-full object-cover grayscale-img"
+                                        onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800'; }}
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="lg:col-span-7 flex flex-col justify-center">
+                                <div className="mb-8">
+                                    <p className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-6">
+                                        {t.professional.intro}
+                                    </p>
+                                    <p className="text-lg text-gray-400 leading-relaxed font-light mb-8 italic">
+                                        "{t.professional.problemSolver}"
+                                    </p>
+
+                                    <h3 className="text-2xl font-bold uppercase tracking-tight mb-6 text-white">{t.professional.helpTitle}</h3>
+
+                                    <div className="flex flex-col gap-1 border-l-2 border-white/5 pl-6 mb-8">
+                                        {t.professional.list.map((item, idx) => (
+                                            <div key={idx} className={`reveal-on-scroll stagger-${(idx % 5) + 1}`}>
+                                                <ListItem text={item} />
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="bg-white/5 p-6 border border-white/10 rounded-sm">
+                                        <p className="text-gray-300 font-light italic">
+                                            {t.professional.style}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        // --- ROLE & WORKSTYLE (New) ---
+        const Role = () => {
+            const { t } = useLanguage();
+            return (
+                <section id="werkwijze" className="py-32 bg-black text-white border-t border-white/5">
+                    <div className="container mx-auto px-6 md:px-12">
+                        <div className="mb-24 border-b border-white/10 pb-8">
+                            <span className="block text-accent font-bold tracking-widest text-xs uppercase mb-4 reveal-on-scroll">{t.role.subtitle}</span>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                            {/* Strengths */}
+                            <div className="reveal-on-scroll">
+                                <h3 className="text-3xl font-black uppercase tracking-tighter mb-8 text-white">{t.role.strengthsTitle}</h3>
+                                <ul className="space-y-4">
+                                    {t.role.strengths.map((item, idx) => (
+                                        <li key={idx} className={`flex items-start gap-3 reveal-on-scroll stagger-${(idx % 5) + 1}`}>
+                                            <span className="text-accent mt-1">✓</span>
+                                            <span className="text-gray-300 font-light leading-relaxed">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Weaknesses */}
+                            <div className="reveal-on-scroll" style={{ transitionDelay: '0.2s' }}>
+                                <h3 className="text-3xl font-black uppercase tracking-tighter mb-8 text-gray-500">{t.role.weaknessesTitle}</h3>
+                                <p className="text-gray-400 mb-6">{t.role.weaknessesIntro}</p>
+                                <ul className="space-y-4 mb-8">
+                                    {t.role.weaknesses.map((item, idx) => (
+                                        <li key={idx} className="flex items-start gap-3">
+                                            <span className="text-gray-600 mt-1">✕</span>
+                                            <span className="text-gray-400 font-light leading-relaxed">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <p className="text-white font-bold text-lg border-l-4 border-accent pl-4">
+                                    {t.role.closing}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        // --- PERSONAL (was Skills) ---
+        const Personal = () => {
+            const { t } = useLanguage();
+            return (
+                <React.Fragment>
+                    <section id="personal" className="py-32 bg-black text-white border-t border-white/5">
+                        <div className="container mx-auto px-6 md:px-12">
+                            <div className="mb-24 border-b border-white/10 pb-8">
+                                <span className="block text-accent font-bold tracking-widest text-xs uppercase mb-4 reveal-on-scroll">{t.personal.subtitle}</span>
+                                <div className="reveal-text-container">
+                                    <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-none reveal-text">
+                                        {t.personal.heading}<span className="text-accent">.</span>
+                                    </h2>
+                                </div>
+                                <p className="text-xl text-gray-400 mt-6 max-w-2xl font-light reveal-on-scroll">{t.personal.intro}</p>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
+                                {/* Sailing */}
+                                <div className="group">
+                                    <div className="aspect-video overflow-hidden mb-6 border border-white/10">
+                                        <img src="Wedstrijdzeilen.png" alt="Zeilen" loading="lazy" className="w-full h-full object-cover grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1534861996586-c3427939c2e8?auto=format&fit=crop&q=80&w=1600'; }} />
+                                    </div>
+                                    <h3 className="text-2xl font-bold uppercase mb-2">{t.personal.sailingTitle}</h3>
+                                    <p className="text-gray-400 font-light leading-relaxed">{t.personal.sailingDesc}</p>
+                                </div>
+
+                                {/* Running */}
+                                <div className="group">
+                                    <div className="overflow-hidden mb-6 border border-white/10">
+                                        <img src="Hardlopen.png" alt="Hardlopen" className="w-full h-auto object-contain grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&q=80&w=1600'; }} />
+                                    </div>
+                                    <h3 className="text-2xl font-bold uppercase mb-2">{t.personal.runningTitle}</h3>
+                                    <p className="text-gray-400 font-light leading-relaxed">{t.personal.runningDesc}</p>
+                                </div>
+                            </div>
+
+                            <div className="bg-[#111] p-12 border border-white/5 relative overflow-hidden">
+                                <div className="relative z-10 mb-8">
+                                    <h3 className="text-3xl font-black uppercase tracking-tighter mb-4">{t.personal.homeTitle}</h3>
+                                    <p className="text-lg text-gray-300 mb-6 font-light">{t.personal.homeDesc}</p>
+                                    <div className="w-12 h-1 bg-accent mb-6"></div>
+                                    <p className="text-xl font-medium text-white italic">"{t.personal.whoAmI}"</p>
+                                </div>
+                                <div className="relative w-full opacity-80 hover:opacity-100 transition-opacity">
+                                    <img src="Gezin.png" className="w-full h-auto rounded-sm grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1000'; }} />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </React.Fragment>
+            );
+        };
+
+        // --- CONTACT ---
+        const Contact = () => {
+            const { t } = useLanguage();
+            return (
+                <section id="contact" className="py-32 bg-black text-white border-t border-white/5 relative">
+                    <div className="container mx-auto px-6 md:px-12 max-w-6xl relative z-10">
+                        <div className="text-center mb-20">
+                            <span className="text-accent font-bold tracking-widest text-xs uppercase">{t.contact.subtitle}</span>
+                            <h2 className="text-6xl md:text-9xl font-black uppercase tracking-tighter mt-4 mb-2 leading-none text-white mix-blend-difference">
+                                {t.contact.heading}
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 border-t border-b border-white/10">
+                            <a href="tel:0622395718" className="group relative p-12 md:p-24 border-b md:border-b-0 md:border-r border-white/10 hover:bg-white/5 transition-colors text-center md:text-left">
+                                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <Icons.ArrowUpRight className="text-accent" />
+                                </div>
+                                <span className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">{t.contact.phone}</span>
+                                <span className="block text-2xl md:text-4xl font-bold tracking-tight text-white group-hover:text-accent transition-colors">
+                                    06 22 39 57 18
+                                </span>
+                            </a>
+
+                            <a href="mailto:mail@remcoroos.com" className="group relative p-12 md:p-24 hover:bg-white/5 transition-colors text-center md:text-left">
+                                <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <Icons.ArrowUpRight className="text-accent" />
+                                </div>
+                                <span className="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">{t.contact.email}</span>
+                                <span className="block text-lg md:text-3xl lg:text-4xl font-bold tracking-tight text-white group-hover:text-accent transition-colors overflow-hidden text-ellipsis">
+                                    mail@remcoroos.com
+                                </span>
+                            </a>
+                        </div>
+
+                        <div className="mt-24 text-center">
+                            <p className="text-gray-600 text-[10px] uppercase tracking-[0.4em] font-bold">
+                                {t.contact.location}
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        // --- MAIN APP ---
+        const App = () => {
+            const [language, setLanguage] = React.useState('nl');
+            const t = translations[language];
+
+            React.useEffect(() => {
+                // Scroll Reveal Observer
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                // Small delay to ensure DOM is ready
+                setTimeout(() => {
+                    document.querySelectorAll('.reveal-on-scroll, .reveal-text-container').forEach(el => observer.observe(el));
+                }, 100);
+
+                // --- TILT EFFECT LOGIC ---
+                const handleMouseMove = (e) => {
+                    document.querySelectorAll('.tilt-card').forEach(card => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+
+                        // Check if mouse is near/over the card to activate effect
+                        // Simple check: is mouse inside rect?
+                        if (
+                            e.clientX >= rect.left &&
+                            e.clientX <= rect.right &&
+                            e.clientY >= rect.top &&
+                            e.clientY <= rect.bottom
+                        ) {
+                            const centerX = rect.width / 2;
+                            const centerY = rect.height / 2;
+
+                            const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg rotation
+                            const rotateY = ((x - centerX) / centerX) * 10;
+
+                            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                        } else {
+                            // Reset if mouse leaves
+                            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+                        }
+                    });
+                };
+
+                // Add global mouse move listener for smoother handling or attach to specific cards
+                // Attaching to window for simplicity in this single-file setup, 
+                // but ideally should be onMouseEnter/Move on specific elements for performance.
+                // Let's use a more performant approach: add event listeners to the cards themselves.
+
+                const cards = document.querySelectorAll('.tilt-card');
+                cards.forEach(card => {
+                    card.addEventListener('mousemove', (e) => {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        const rotateX = ((y - centerY) / centerY) * -5;
+                        const rotateY = ((x - centerX) / centerX) * 5;
+                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                    });
+
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+                    });
+
+                    // Add transition for smooth reset
+                    card.style.transition = 'transform 0.1s ease-out';
+                });
+
+                return () => {
+                    observer.disconnect();
+                    cards.forEach(card => {
+                        // Cleanup listeners if needed (though mostly handled by React unmount usually)
+                    });
+                };
+            }, []);
+
+            return (
+                <LanguageContext.Provider value={{ language, setLanguage, t }}>
+                    <div className="bg-black min-h-screen text-white selection:bg-white selection:text-black font-sans">
+                        <Header />
+                        <main>
+                            <Hero />
+                            <Professional />
+                            <Role />
+                            <Personal />
+                            <Contact />
+                        </main>
+                        <footer className="bg-black text-white py-12 border-t border-white/5">
+                            <div className="container mx-auto px-6 text-center">
+                                <h2 className="text-2xl tracking-tighter mb-6 select-none opacity-50 grayscale hover:grayscale-0 transition-all">
+                                    <span className="font-light text-gray-400">REMCO</span>
+                                    <span className="font-black text-white">ROOS</span>
+                                    <span className="text-accent font-bold">.</span>
+                                </h2>
+                                <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-700">
+                                    © {new Date().getFullYear()}
+                                </p>
+                            </div>
+                        </footer>
+                    </div>
+                </LanguageContext.Provider>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+
+</html>

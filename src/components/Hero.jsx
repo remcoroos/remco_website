@@ -25,9 +25,11 @@ const Hero = () => {
 
             <div className="container mx-auto px-6 md:px-12 relative z-20 pb-24 md:pb-32">
                 <div className="mb-8 overflow-hidden">
-                    <h1 className="text-4xl md:text-[4.5rem] lg:text-[6rem] font-black text-white tracking-tighter leading-[0.9] uppercase animate-slide-up drop-shadow-2xl text-left text-gradient-metallic">
-                        Remco <br /> Roos
-                        <span className="sr-only"> - Performance Marketeer</span>
+                    <h1
+                        className="text-4xl md:text-[4.5rem] lg:text-[6rem] font-black text-white tracking-tighter leading-[0.9] uppercase animate-slide-up drop-shadow-2xl text-left text-gradient-metallic"
+                        aria-label="Remco Roos - Performance Marketeer"
+                    >
+                        <span aria-hidden="true">Remco <br /> Roos</span>
                     </h1>
                     <p className="text-gold text-lg md:text-2xl font-bold tracking-wider uppercase mt-4 animate-slide-up delay-100">
                         {t.hero.tagline}

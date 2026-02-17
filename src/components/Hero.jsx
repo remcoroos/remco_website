@@ -27,6 +27,7 @@ const Hero = () => {
                 <div className="mb-8 overflow-hidden">
                     <h1 className="text-4xl md:text-[4.5rem] lg:text-[6rem] font-black text-white tracking-tighter leading-[0.9] uppercase animate-slide-up drop-shadow-2xl text-left text-gradient-metallic">
                         Remco <br /> Roos
+                        <span className="sr-only"> - Performance Marketeer</span>
                     </h1>
                     <p className="text-gold text-lg md:text-2xl font-bold tracking-wider uppercase mt-4 animate-slide-up delay-100">
                         {t.hero.tagline}
@@ -37,7 +38,7 @@ const Hero = () => {
                     <span className="text-white">{t.hero.subline}</span>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-4 animate-slide-up w-full md:w-auto" style={{ animationDelay: '0.4s' }}>
+                <div className="flex flex-col md:flex-row gap-5 md:gap-4 animate-slide-up w-full md:w-auto" style={{ animationDelay: '0.4s' }}>
                     <Magnetic>
                         <a href="#professional" className="btn-sleek btn-glow px-8 py-4 border border-white bg-white/10 backdrop-blur-sm text-white font-bold uppercase text-xs tracking-[0.2em] hover:bg-white hover:text-black transition-all inline-block w-full md:w-auto text-center">
                             {t.hero.btnExpertise}

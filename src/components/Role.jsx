@@ -17,7 +17,7 @@ const Role = () => {
                         <div className="space-y-8">
                             {t.role.strengths.map((item, idx) => (
                                 <div key={idx} className={`group flex items-start gap-6 reveal-on-scroll stagger-${(idx % 5) + 1}`}>
-                                    <span className="text-accent text-xl mt-0.5 shrink-0">✓</span>
+                                    <span className="text-accent text-2xl mt-0 shrink-0 leading-none">✓</span>
                                     <span className="text-lg text-gray-300 font-light leading-relaxed group-hover:text-white transition-colors border-b border-transparent group-hover:border-white/10 pb-4 w-full">{item}</span>
                                 </div>
                             ))}
@@ -31,7 +31,7 @@ const Role = () => {
                         <div className="space-y-8 mb-16">
                             {t.role.weaknesses.map((item, idx) => (
                                 <div key={idx} className="group flex items-start gap-6">
-                                    <span className="text-gray-600 mt-1.5 text-[10px] font-bold uppercase tracking-[0.2em] group-hover:text-gray-400 transition-colors w-24 shrink-0 text-right">Improve</span>
+                                    <span className="text-gray-500 mt-1.5 text-[10px] font-bold uppercase tracking-[0.2em] group-hover:text-gray-300 transition-colors w-24 shrink-0 text-right">Improve</span>
                                     <span className="text-lg text-gray-400 font-light leading-relaxed group-hover:text-gray-300 transition-colors border-b border-white/5 group-hover:border-white/10 pb-4 w-full">{item}</span>
                                 </div>
                             ))}

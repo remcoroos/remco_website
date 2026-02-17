@@ -52,9 +52,9 @@ const Professional = () => {
                                 "{t.professional.problemSolver}"
                             </p>
 
-                            <h3 className="text-2xl font-bold uppercase tracking-tight mb-6 text-white">{t.professional.helpTitle}</h3>
+                            <h3 className="text-2xl font-bold uppercase tracking-tight mb-8 text-white">{t.professional.helpTitle}</h3>
 
-                            <div className="flex flex-col gap-1 border-l-2 border-white/5 pl-6 mb-8">
+                            <div className="flex flex-col gap-1 border-l-2 border-white/5 pl-6 md:pl-6 ml-2 md:ml-0 mb-8">
                                 {t.professional.list.map((item, idx) => (
                                     <div key={idx} className={`reveal-on-scroll stagger-${(idx % 5) + 1}`}>
                                         <ListItem text={item} />
@@ -62,7 +62,7 @@ const Professional = () => {
                                 ))}
                             </div>
 
-                            <div className="bg-white/5 p-6 border border-white/10 rounded-sm">
+                            <div className="bg-white/5 p-6 border border-white/10 rounded-sm transition-all duration-500 hover:bg-white/[0.07] hover:border-white/15">
                                 <p className="text-gray-300 font-light italic">
                                     {t.professional.style}
                                 </p>

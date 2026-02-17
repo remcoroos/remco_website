@@ -19,7 +19,7 @@ const Personal = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24">
                         {/* Sailing */}
-                        <div className="group">
+                        <div className="group transition-transform duration-500 hover:scale-[1.01]">
                             <div className="aspect-video overflow-hidden mb-6 border border-white/10">
                                 <img src="/Wedstrijdzeilen.png" alt="Zeilen" width="1024" height="1024" loading="lazy" className="w-full h-full object-cover grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1534861996586-c3427939c2e8?auto=format&fit=crop&q=80&w=1600'; }} />
                             </div>
@@ -28,23 +28,23 @@ const Personal = () => {
                         </div>
 
                         {/* Running */}
-                        <div className="group">
-                            <div className="overflow-hidden mb-6 border border-white/10">
-                                <img src="/Hardlopen.webp" alt="Hardlopen" width="724" height="654" className="w-full h-auto object-contain grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&q=80&w=1600'; }} />
+                        <div className="group transition-transform duration-500 hover:scale-[1.01]">
+                            <div className="aspect-video overflow-hidden mb-6 border border-white/10">
+                                <img src="/Hardlopen.webp" alt="Hardlopen" width="724" height="654" className="w-full h-full object-cover grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&q=80&w=1600'; }} />
                             </div>
                             <h3 className="text-2xl font-bold uppercase mb-2">{t.personal.runningTitle}</h3>
                             <p className="text-gray-400 font-light leading-relaxed">{t.personal.runningDesc}</p>
                         </div>
                     </div>
 
-                    <div className="bg-[#111] p-12 border border-white/5 relative overflow-hidden">
+                    <div className="bg-[#111] p-12 border border-white/5 relative overflow-hidden transition-all duration-500 hover:border-white/10">
                         <div className="relative z-10 mb-8">
                             <h3 className="text-3xl font-black uppercase tracking-tighter mb-4">{t.personal.homeTitle}</h3>
                             <p className="text-lg text-gray-300 mb-6 font-light">{t.personal.homeDesc}</p>
                             <div className="w-12 h-1 bg-accent mb-6"></div>
                             <p className="text-xl font-medium text-white italic">"{t.personal.whoAmI}"</p>
                         </div>
-                        <div className="relative w-full opacity-80 hover:opacity-100 transition-opacity">
+                        <div className="relative w-full opacity-90 hover:opacity-100 transition-opacity duration-500">
                             <img src="/Gezin.webp" alt="Remco Roos Gezin" width="532" height="400" className="w-full h-auto rounded-sm grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1000'; }} />
                         </div>
                     </div>

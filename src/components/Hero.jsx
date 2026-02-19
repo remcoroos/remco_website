@@ -10,7 +10,7 @@ const Hero = () => {
             {/* Cinematic Background */}
             <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
                 <img
-                    src="/Profiel.webp"
+                    src="/Profiel.png"
                     alt="Remco Roos"
                     width="1265"
                     height="1062"

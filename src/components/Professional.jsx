@@ -30,7 +30,7 @@ const Professional = () => {
                     <TiltCard className="lg:col-span-5 relative group">
                         <div className="overflow-hidden bg-[#111] relative">
                             <img
-                                src="/Werk.webp"
+                                src="/Werk.png"
                                 alt="Remco Roos InfoTrade"
                                 width="728"
                                 height="611"

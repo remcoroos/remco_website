@@ -30,7 +30,7 @@ const Personal = () => {
                         {/* Running */}
                         <div className="group transition-transform duration-500 hover:scale-[1.01]">
                             <div className="aspect-video overflow-hidden mb-6 border border-white/10">
-                                <img src="/Hardlopen.webp" alt="Hardlopen" width="724" height="654" className="w-full h-full object-cover grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&q=80&w=1600'; }} />
+                                <img src="/Hardlopen.png" alt="Hardlopen" width="724" height="654" className="w-full h-full object-cover grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&q=80&w=1600'; }} />
                             </div>
                             <h3 className="text-2xl font-bold uppercase mb-2">{t.personal.runningTitle}</h3>
                             <p className="text-gray-400 font-light leading-relaxed">{t.personal.runningDesc}</p>
@@ -45,7 +45,7 @@ const Personal = () => {
                             <p className="text-xl font-medium text-white italic">"{t.personal.whoAmI}"</p>
                         </div>
                         <div className="relative w-full opacity-90 hover:opacity-100 transition-opacity duration-500">
-                            <img src="/Gezin.webp" alt="Remco Roos Gezin" width="532" height="400" className="w-full h-auto rounded-sm grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1000'; }} />
+                            <img src="/Gezin.png" alt="Remco Roos Gezin" width="532" height="400" className="w-full h-auto rounded-sm grayscale-img" onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1000'; }} />
                         </div>
                     </div>
                 </div>

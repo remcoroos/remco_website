@@ -1,15 +1,8 @@
 {
-    "redirects": [
+    "rewrites": [
         {
-            "source": "/:path*",
-            "has": [
-                {
-                    "type": "host",
-                    "value": "remcoroos.com"
-                }
-            ],
-            "destination": "https://www.remcoroos.com/:path*",
-            "permanent": true
+            "source": "/((?!assets/).*)",
+            "destination": "/index.html"
         }
     ]
 }
